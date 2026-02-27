@@ -8,7 +8,7 @@ interface Props {
 export default function MessageInput({ onSend, disabled = false }: Props) {
   const [text, setText] = useState("");
 
-  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  function handleSubmit(e: React.SyntheticEvent<HTMLFormElement>) {
     e.preventDefault();
     const trimmed = text.trim();
     if (!trimmed) return;
